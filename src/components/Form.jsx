@@ -5,12 +5,16 @@ function Form() {
     <div>
       <form className="add-book-form">
         <div className="form-group">
-          <label htmlFor="title">Title: </label>
-          <input type="text" name="title" id="title" />
+          <label htmlFor="title">
+            Title:
+            <input type="text" name="title" id="title" />
+          </label>
         </div>
         <div className="form-group">
-          <label htmlFor="author">Author: </label>
-          <input type="text" name="author" id="author" />
+          <label htmlFor="author">
+            Author:
+            <input type="text" name="author" id="author" />
+          </label>
         </div>
         <button type="submit">Add Book</button>
       </form>

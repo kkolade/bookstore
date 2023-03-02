@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Book from './Book';
 import Form from './Form';
-import propt
 
 function Books() {
   const [books, setBooks] = useState([
@@ -35,8 +34,6 @@ function Books() {
       </>
     </div>
   );
-
-  Books.prototype = {books: PropType.array.required};
 }
 
 export default Books;
