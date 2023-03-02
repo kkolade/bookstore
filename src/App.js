@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable import/extensions */
+import { Link, Route, Routes } from 'react-router-dom';
+import Books from './components/Books.jsx';
+import Categories from './components/Categories.jsx';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="site-title">The Ultimate Bookstore</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Books</Link>
+          </li>
+          <li>
+            <Link to="/categories">Categories</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
     </div>
   );
 }
