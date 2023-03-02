@@ -1,30 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Book from './Book';
+import Form from './Form';
 
 function Books() {
+  const [books, setBooks] = useState([
+    {
+      id: 1,
+      title: 'Vulture is a Patient Bird',
+      author: 'James Hardley Chase',
+    },
+    {
+      id: 2,
+      title: 'A Time to Kill',
+      author: 'John Grisham',
+    },
+    {
+      id: 3,
+      title: 'Good Times',
+      author: 'Kola Kolade',
+    },
+  ]);
   return (
     <div>
+      <h3>Books</h3>
       <>
         <div className="book-list">
           <ul className="list">
-            <li className="list-item">
-              Vulture is a Patient Bird by James Hardley Chase
-            </li>
-            <li className="list-item">A Time to Kill by John Grisham</li>
-            <li className="list-item">Good Times by Kola Kolade</li>
+            <Book books={books} setBooks={setBooks} />
           </ul>
         </div>
-
-        <form className="add-book-form">
-          <div className="form-group">
-            <label htmlFor="title">Title: </label>
-            <input type="text" name="title" id="title" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="author">Author: </label>
-            <input type="text" name="author" id="author" />
-          </div>
-          <button type="submit">Add Book</button>
-        </form>
+        <h3>Add New Book</h3>
+        <Form />
       </>
     </div>
   );
