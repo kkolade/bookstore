@@ -5,7 +5,10 @@ function Book({ books, setBooks }) {
     <ul>
       {books.map((book) => (
         <li key={book.id}>
-          {book.title} by {book.author}
+          {book.title}
+          {' '}
+          by
+          {book.author}
           <button type="submit">Remove</button>
         </li>
       ))}
