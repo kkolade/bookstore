@@ -1,6 +1,7 @@
+/* eslint-disable import/extensions */
 import { Link, Route, Routes } from 'react-router-dom';
-import Books from './components/Books';
-import Categories from './components/Categories';
+import Books from './components/Books.jsx';
+import Categories from './components/Categories.jsx';
 
 function App() {
   return (
